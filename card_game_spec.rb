@@ -14,10 +14,19 @@ def setup
   @card4 = Card.new('clubs', 5)
 end
 
-def test_is_ace__false
-  assert_equal(false, CardGame.checkforAce(@card1))
+def test_is_ace__true
+  assert_equal(true, CardGame.is_ace(@card2))
 end
 
+def test_is_ace__false
+  assert_equal(false, CardGame.is_ace(@card1))
+end
+
+def test_returns_highest_card
+  assert_equal(@card1, CardGame.highest_card(@card1, @card2))
+end
+
+def
 
 
 end
