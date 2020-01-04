@@ -12,6 +12,8 @@ def setup
   @card2 = Card.new('diamonds', 1)
   @card3 = Card.new('spades', 9)
   @card4 = Card.new('clubs', 5)
+
+  @cards = [@card1, @card2, @card3, @card4]
 end
 
 def test_is_ace__true
@@ -26,7 +28,8 @@ def test_returns_highest_card
   assert_equal(@card1, CardGame.highest_card(@card1, @card2))
 end
 
-def
-
+def test_cards_total
+  assert_equal("You have a total of 27", CardGame.cards_total(@cards))
+end
 
 end
