@@ -8,7 +8,6 @@ class CardGame
 
   def checkforAce(card)
     # There is no consistency in method naming. The above looks like it is trying to be camel case, but the "f" in "for" should be capital then. I also wonder if this is the best name for this method. Could be something like "isAce" (if we're going camel case) because we're getting back a true or false. Since this is ruby, could also be "isAce?".
-    # Also, because this is being run on a specific instance of a card, I feel that there shouldn't be any parameters given. It means that below, we wouldn't need to write "card.value" but rather just "value".
     if card.value = 1
       # Should be ==, not =. We're comparing, not assigning.
       return true
