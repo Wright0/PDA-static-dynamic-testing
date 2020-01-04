@@ -8,7 +8,7 @@ class CardGame
 
 
   def checkforAce(card)
-    # There is no consistency in method naming. The above looks like it is trying to be camel case, but the "f" in "for" should be capital then.
+    # There is no consistency in method naming. The above looks like it is trying to be camel case, but the "f" in "for" should be capital then. I also wonder if this is the best name for this method. Could be something like "isAce" (if we're going camel case) because we're getting back a true or false. Since this is ruby, could also be "isAce?".
     if card.value = 1
       return true
     else
@@ -27,7 +27,7 @@ class CardGame
   end
 end
 end
-# There are too many "end"s in this method.
+# There are too many "end"s in this method. Also, what happens if the cards are of equal value? As it stands, I believe it would say that the second card is the higher card, even if it's not.
 
 def self.cards_total(cards)
   total
@@ -35,6 +35,7 @@ def self.cards_total(cards)
   for card in cards
     total += card.value
     return "You have a total of" + total
+    # There would need to be a space after the word "of" or else the number will be attached to the word "of".
   end
 end
 ```
