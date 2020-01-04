@@ -35,7 +35,7 @@ def self.cards_total(cards)
   for card in cards
     total += card.value
     return "You have a total of" + total
-    # There would need to be a space after the word "of" or else the number will be attached to the word "of".
+    # There would need to be a space after the word "of" or else the number will be attached to the word "of". This statement should also be outside of the loop otherwise it will stop at the first return and only return the value of the first card in the array.
   end
 end
 
