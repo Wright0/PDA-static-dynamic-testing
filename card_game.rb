@@ -6,7 +6,7 @@
 class CardGame
 
 
-  def checkforAce(card)
+  def is_ace?(card)
     if card.value = 1
       return true
     else
