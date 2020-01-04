@@ -12,6 +12,7 @@ def setup
   @card2 = Card.new('diamonds', 1)
   @card3 = Card.new('spades', 9)
   @card4 = Card.new('clubs', 5)
+  @card5 = Card.new('spades', 5)
 
   @cards = [@card1, @card2, @card3, @card4]
 end
@@ -26,6 +27,10 @@ end
 
 def test_returns_highest_card
   assert_equal(@card1, CardGame.highest_card(@card1, @card2))
+end
+
+def test_returns_highest_card__draw
+  assert_equal("Draw!", CardGame.highest_card(@card4, @card5))
 end
 
 def test_cards_total
