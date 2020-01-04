@@ -2,7 +2,7 @@ require('minitest/autorun')
 require('minitest/reporters')
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
-require_relative('../card_game')
+require_relative('card_game')
 
 class TestCardGame < Minitest::Test
 
@@ -30,8 +30,12 @@ def setup
 end
 
 def test_is_ace?
-
+  assert_equal(false, is_ace?(@card1))
 end
+
+# def test_is_ace?
+#   assert_equal (true, is_ace?(@card2))
+# end
 
 
 end
