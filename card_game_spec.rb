@@ -15,7 +15,7 @@ def setup
 end
 
 def test_is_ace__false
-  assert_equal(false, CardGame.is_ace(@card1))
+  assert_equal(false, CardGame.checkforAce(@card1))
 end
 
 
