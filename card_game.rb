@@ -5,8 +5,7 @@
 
 class CardGame
 
-
-  def is_ace?(card)
+  def checkforAce(card)
     if card.value = 1
       return true
     else
@@ -20,8 +19,7 @@ class CardGame
 #   else
 #     return card2
 #   end
-# end
-# end
+#   end
 
 # def self.cards_total(cards)
 #   total
@@ -30,3 +28,5 @@ class CardGame
 #     return "You have a total of" + total
 #   end
 # end
+
+end
