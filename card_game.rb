@@ -1,8 +1,3 @@
-### Testing task 2 code:
-
-# Carry out dynamic testing on the code below.
-# Correct the errors below that you spotted in task 1.
-
 class CardGame
 
   def self.is_ace(card)
@@ -19,12 +14,11 @@ class CardGame
     end
   end
 
-def self.cards_total(cards)
-  total = 0
-  for card in cards
-    total += card.value
-  end
-  return "You have a total of #{total}"
-end
-
+    def self.cards_total(cards)
+      total = 0
+      for card in cards
+        total += card.value
+      end
+      return "You have a total of #{total}"
+    end
 end

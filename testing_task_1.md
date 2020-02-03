@@ -7,9 +7,8 @@
 class CardGame
 
   def checkforAce(card)
-    # There is no consistency in method naming. The above looks like it is trying to be camel case, but the "f" in "for" should be capital then.
-    # I also wonder if this is the best name for this method. Could be something like "isAce" (if we're going camel case) because we're getting back a true or false. Since this is ruby, could also be "isAce?".
-    # Finally, this should be a class method, not an object method. That means adding self.
+    # You don't use camel case for ruby methods.
+    # This should be a class method, not an object method. That means adding self in front of the method name.
     if card.value = 1
       # Should be ==, not =. We're comparing, not assigning.
       return true
@@ -17,12 +16,10 @@ class CardGame
       return false
     end
   end
-  #The above method could be simplified since we're working with booleans, but I think that's a refactor situation and not necessarily an error.
 
   dif highest_card(card1 card2)
   # "dif" should be "def".
   # There should be a comma between the parameters.
-  # We also have yet another naming convention for methods. Here we're using snake case.
   # Should be a class method, not an object method.
   if card1.value > card2.value
     return card
@@ -32,8 +29,7 @@ class CardGame
   end
 end
 end
-# There are too many "end"s in this method.
-# Also, what happens if the cards are of equal value? As it stands, I believe it would say that the second card is the higher card, even if it's not.
+#This end is in the wrong place. It should be on line 45.
 
 def self.cards_total(cards)
   total
@@ -41,10 +37,10 @@ def self.cards_total(cards)
   for card in cards
     total += card.value
     return "You have a total of" + total
-    # There would need to be a space after the word "of" or else the number will be attached to the word "of".
-    # This statement should also be outside of the loop otherwise it will stop at the first return and only return the value of the first card in the array.
+    # the total needs to be coerced back into a string using .to_s or else using string interpolation.
+    # This statement should be outside of the loop otherwise it will stop at the first return and only return the value of the first card in the array.
   end
 end
 
-# Missing an "end" here to close the class.
+# This is where that "end" should be to close the class. As it stands, the self.cards_total method is floating in this file.
 ```
